@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gerador de Mensagens Criptografadas</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            background: #222;
+            color: #eee;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            font-size: 1rem;
+            border-radius: 4px;
+            border: none;
+            resize: vertical;
+            background: #333;
+            color: #eee;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background: #0a84ff;
+            color: white;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #0066cc;
+        }
+
+        pre {
+            background: #111;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 6px;
+            white-space: pre-wrap;
+            word-break: break-word;
+            max-height: 300px;
+            overflow-y: auto;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Gerador de Mensagens Criptografadas</h1>
+
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" placeholder="Título da mensagem" />
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Nome do remetente" />
+
+        <label for="senha">Senha Original:</label>
+        <input type="password" id="senha" placeholder="Senha usada para criptografia" />
+
+        <label for="texto">Texto Original:</label>
+        <textarea id="texto" rows="6" placeholder="Digite o texto secreto aqui..."></textarea>
+
+        <button id="gerarBtn">Gerar JSON Criptografado</button>
+
+        <pre id="resultado"></pre>
+    </div>
+
+    <script src="gerar.js"></script>
+    <footer>
+        Feito com ❤️ por
+        <a href="https://links.johnnick.com.br" target="_blank">Johnnick F Landim</a>
+    </footer>
+</body>
+
+</html>

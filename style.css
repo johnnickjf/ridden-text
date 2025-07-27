@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 70px;
+    /* espaço para o footer fixo */
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e1e, #0d0d0d);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f2f2f2;
+    flex-direction: column;
+}
+
+.container {
+    background: #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    animation: fadein 1.2s ease-in-out;
+}
+
+h1 {
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+input[type="password"] {
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #2a2a2a;
+    color: #fff;
+    transition: 0.3s;
+}
+
+input[type="password"]:focus {
+    background: #333;
+    border: 1px solid #00c3ff;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #00c3ff;
+    color: #fff;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #00a8dd;
+    transform: scale(1.05);
+}
+
+footer {
+    position: fixed;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    font-weight: 300;
+    pointer-events: none;
+    /* impede clique em link se estiver sobreposto */
+}
+
+footer a {
+    color: #00c3ff;
+    text-decoration: none;
+    font-weight: 400;
+    pointer-events: auto;
+    /* reativa o clique apenas no link */
+}
+
+#mensagem-container {
+    margin-top: 30px;
+    font-size: 17px;
+    white-space: pre-line;
+    animation: fadein 1.5s ease-in-out;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
